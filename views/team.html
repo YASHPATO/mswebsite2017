@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Our Team</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body>
+      <div id="ip-container">
+        <div class="ip-header">        
+          <div class="ip-loader">
+            <div class="progress-count"><span id="progrss-cnt">0</span>%</div>
+            <svg class="ip-inner" width="220px" height="220px" viewBox="0 0 80 80">
+              <path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+              <path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="wrapper ip-main">
+          <!-- header start here -->
+          <header>
+            <div class="navigation clearfix">
+              <div class="logo">
+                <a href="index.html"><img src="images/logo.png" class="img-responsive" alt="owkey"></a>
+              </div>
+              <div class="sidebar-menu">
+                <button class="menu-btn">
+                  <span>&nbsp;</span>
+                  <span>&nbsp;</span>
+                  <span>&nbsp;</span>
+                </button>
+                <div class="nav-box">
+                  <ul class="menu">
+                    <li class="menu-item-has-children">
+                      <span>Home <i class="fa fa-angle-down"></i></span>
+                      <ul class="sub-menu">
+                        <li><a href="index1.html">Home 1</a></li>
+                        <li><a href="index2.html">Home 2</a></li>
+                        <li><a href="index3.html">Home 3</a></li>
+                        <li><a href="index4.html">Home 4</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                      <span>Pages <i class="fa fa-angle-down"></i></span>
+                      <ul class="sub-menu">
+                        <li><a href="about.html">About 1</a></li>
+                        <li><a href="about2.html">About 2</a></li>
+                        <li><a href="our-offers.html">Our Offers</a></li>
+                        <li><a href="team.html">Team</a></li>
+                                            <li><a href="team-single.html">Team Single</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                      <span>Services <i class="fa fa-angle-down"></i></span>
+                      <ul class="sub-menu">
+                        <li><a href="services.html">Services 1</a></li>
+                        <li><a href="services2.html">Services 2</a></li>
+                        <li><a href="services3.html">Services 3</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                      <span>Blog <i class="fa fa-angle-down"></i></span>
+                      <ul class="sub-menu">
+                        <li><a href="blog-archive.html">Blog Archive</a></li>
+                        <li><a href="blog-page.html">Blog Listing</a></li>
+                        <li><a href="blog-single.html">Blog Single</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                      <span>Portfolio <i class="fa fa-angle-down"></i></span>
+                      <ul class="sub-menu">
+                        <li><a href="portfolio.html">Portfolio Masonry</a></li>
+                        <li><a href="portfolio2.html">Portfolio 4 Columns</a></li>
+                        <li><a href="portfolio3.html">Portfolio Single</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </header>
+          <!-- header ends here -->
+          <!-- banner start here -->
+          <div class="banner inner-banner">
+            <img src="images/placeholder-bg.jpg" alt="banner" class="img-responsive">
+            <div class="banner-caption">
+              <h1>OUR TEAM</h1>
+              <ol class="breadcrumb"> <li><a href="#">home</a></li> <li class="active">our team</li> </ol>
+            </div>
+          </div>
+          <!-- banner end here -->
+          <!-- about-content -->
+          <div class="container">
+            <div class="team-page">
+              <div data-js="hero-demo" class="wow fadeInUp">
+                <ul class="filters button-group js-radio-button-group list-inline tabs">
+                  <li><button class="button is-checked" data-filter="*">All</button></li>
+                  <li><button class="button" data-filter=".staff">Staff</button></li>
+                  <li><button class="button" data-filter=".designers">Designers</button></li>
+                  <li><button class="button" data-filter=".developers">Developers</button></li>
+                  <li><button class="button" data-filter=".marketing">Marketing</button></li>
+                  <li><button class="button" data-filter=".support">Support</button></li>
+                </ul>
+                <div class="grid portfolio thumbnails meet-our-team">
+                  <div class="element-item staff developers" data-category="staff">
+                    <div class="feature-box box-shadow wow fadeInUp">
+                      <div class="icon">
+                        <a href="#"><img src="images/placeholder.jpg" alt="img" class="img-responsive" /></a>
+                      </div>
+                      <div class="feature-title text-uppercase">
+                        <h3>Nicklas Monig</h3>
+                        <span class="link">CEO</span>
+                      </div>
+                      <p>“ At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. “</p>
+                      <div class="social-icons">
+                        <ul class="list-inline list-unstyled">
+                          <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                          <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                          <li><a href="#" class="google"><i class="fa fa-google"></i></a></li>
+                          <li><a href="#" class="pinterest"><i class="fa fa-pinterest-p"></i></a></li>
+                          <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                          <li><a href="#" class="rss"><i class="fa fa-rss"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="element-item developers support" data-category="developers">    
+                    <div class="feature-box box-shadow wow fadeInUp">
+                      <div class="icon">
+                       <a href="#"><img src="images/placeholder.jpg" alt="img" class="img-responsive" /></a>
+                     </div>
+                     <div class="feature-title">
+                      <h3 class="text-uppercase">Yvonne kling</h3>
+                      <span class="link">Designer</span>
+                    </div>
+                    <p>“ At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. “</p>
+                    <div class="social-icons">
+                      <ul class="list-inline list-unstyled">
+                        <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="google"><i class="fa fa-google"></i></a></li>
+                        <li><a href="#" class="pinterest"><i class="fa fa-pinterest-p"></i></a></li>
+                        <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#" class="rss"><i class="fa fa-rss"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="element-item marketing developers" data-category="marketing">
+                  <div class="feature-box box-shadow wow fadeInUp">
+                    <div class="icon">
+                      <a href="#"><img src="images/placeholder.jpg" alt="img" class="img-responsive" /></a>
+                    </div>
+                    <div class="feature-title">
+                      <h3 class="text-uppercase">Jason bourne</h3>
+                      <span class="link">Developer</span>
+                    </div>
+                    <p>“ At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. “</p>
+                    <div class="social-icons">
+                      <ul class="list-inline list-unstyled">
+                        <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="google"><i class="fa fa-google"></i></a></li>
+                        <li><a href="#" class="pinterest"><i class="fa fa-pinterest-p"></i></a></li>
+                        <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#" class="rss"><i class="fa fa-rss"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="element-item marketing developers support" data-category="marketing">
+                  <div class="feature-box box-shadow wow fadeInUp">
+                    <div class="icon">
+                      <a href="#"><img src="images/placeholder.jpg" alt="img" class="img-responsive" /></a>
+                    </div>
+                    <div class="feature-title">
+                      <h3 class="text-uppercase">JONAS DEPPING</h3>
+                      <span class="link">Marketing Agent</span>
+                    </div>
+                    <p>“ At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. “</p>
+                    <div class="social-icons">
+                      <ul class="list-inline list-unstyled">
+                        <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="google"><i class="fa fa-google"></i></a></li>
+                        <li><a href="#" class="pinterest"><i class="fa fa-pinterest-p"></i></a></li>
+                        <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#" class="rss"><i class="fa fa-rss"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="element-item staff developers" data-category="staff">
+                  <div class="feature-box box-shadow wow fadeInUp">
+                    <div class="icon">
+                     <a href="#"><img src="images/placeholder.jpg" alt="img" class="img-responsive" /></a>
+                   </div>
+                   <div class="feature-title">
+                    <h3 class="text-uppercase">NICOLE BACH</h3>
+                    <span class="link">Designer</span>
+                  </div>
+                  <p>“ At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. “</p>
+                  <div class="social-icons">
+                    <ul class="list-inline list-unstyled">
+                      <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#" class="google"><i class="fa fa-google"></i></a></li>
+                      <li><a href="#" class="pinterest"><i class="fa fa-pinterest-p"></i></a></li>
+                      <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                      <li><a href="#" class="rss"><i class="fa fa-rss"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="element-item designers developers support" data-category="designers">
+                <div class="feature-box box-shadow wow fadeInUp">
+                  <div class="icon">
+                    <a href="#"><img src="images/placeholder.jpg" alt="img" class="img-responsive" /></a>
+                  </div>
+                  <div class="feature-title">
+                    <h3 class="text-uppercase">Kevin kaolu</h3>
+                    <span class="link">Developer</span>
+                  </div>
+                  <p>“ At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. “</p>
+                  <div class="social-icons">
+                    <ul class="list-inline list-unstyled">
+                      <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#" class="google"><i class="fa fa-google"></i></a></li>
+                      <li><a href="#" class="pinterest"><i class="fa fa-pinterest-p"></i></a></li>
+                      <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                      <li><a href="#" class="rss"><i class="fa fa-rss"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>  
+            </div>
+          </div>
+          <div class="next-previous-btn">
+            <ul class="pagination"> 
+              <li class="disabled"><a href="#" aria-label="Previous" class="previous"><span aria-hidden="true">«</span>PREV</a></li>
+              <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li> 
+              <li><a href="#">2</a></li> 
+              <li><a href="#">3</a></li> 
+              <li><a href="#">4</a></li> 
+              <li><a href="#">5</a></li> 
+              <li><a href="#" aria-label="Next" class="next">NEXT<span aria-hidden="true">»</span></a></li> 
+            </ul>
+          </div>
+        </div>    
+      </div>
+      <!-- about-content end-->
+      <!-- footer start -->
+      <footer>
+        <div class="clearfix">
+          <div class="col-sm-7 col-xs-12 no-padding">
+            <div class="footer-section-left">
+              <div class="clearfix">
+                <div class="col-sm-6 col-xs-12">
+                  <div class="footer-logo">
+                    <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                    <p>Multi-Concept Portfolio Template</p>
+                  </div>
+                  <div class="social-icons">
+                    <ul class="list-inline list-unstyled">
+                      <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                      <li><a href="#" class="google"><i class="fa fa-google"></i></a></li>
+                      <li><a href="#" class="pinterest"><i class="fa fa-pinterest-p"></i></a></li>
+                      <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                      <li><a href="#" class="rss"><i class="fa fa-rss"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-xs-12 text-right">
+                  <div class="information-section">
+                    <a class="number" href="tel:080049123456789">0800 49 123-456-789</a>
+                    <p>E-Mail: <a href="mailto:support@owkey.com">support@owkey.com</a></p>
+                    <a href="contact.html" class="btn btn-orange">get in touch</a>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-navigation">
+                <ul class="list-unstyled">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="portfolio2.html">Our Works</a></li>
+                  <li><a href="blog-page.html">Our Blog</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="copyright">
+              <p>Copyright 2017 © <strong>Owkey - Multi-Concept Portfolio Template</strong> | All Rights Reserved</p>
+            </div>
+          </div>
+          <div class="col-sm-5 col-xs-12 no-padding">
+            <div class="footer-section-right">
+              <div class="overlay"></div>
+              <div class="address-box">
+                <h2>Address</h2>
+                <address>
+                  <p>124 Lafayette Street & Houston Street</p>
+                  <p>New York, NY 10012, USA</p>
+                </address>
+                <address>
+                  <p>235 La Salle Square</p>
+                  <p>Providence, RI 02903, USA</p>
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <a href="#" class="scrollup"><i class="fa fa-chevron-up"></i></a>
+      <!-- footer end -->
+    </div>
+  </div>
+  <!-- css start -->
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/slick.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <!-- css end -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script type="text/javascript" src="js/isotope.pkgd.js"></script>
+  <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+  <script type="text/javascript" src="js/isotope-docs.min.js?3"></script>
+  <script type="text/javascript" src="js/modernizr.custom.js"></script> 
+  <script type="text/javascript" src="js/classie.js"></script>
+  <script type="text/javascript" src="js/pathLoader.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>   
+  <script type="text/javascript" src="js/jquery.unveilEffects.js"></script>
+  <script type="text/javascript" src="js/owkey.js"></script>  
+</body>
+</html>
