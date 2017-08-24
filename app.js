@@ -6,21 +6,34 @@ const flash = require("flash");
 
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
-// app.use(bodyparser.json());
-// app.use(bodyparser.urlencoded({ extended: true }));
-// app.use(flash());
+app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'static'), { maxAge: 31557600000 }));
 
-app.get('/', (req,res) => {
-    res.sendFile(path.join(__dirname , 'views','index.html'));
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
-app.get('/contact', (req,res) => {
-    res.sendFile(path.join(__dirname , 'views','contact.html'));
+app.get('/contact', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'contact.html'));
 });
 
-app.get("/team", (req,res) => {
-    res.sendFile(path.join(__dirname , 'views','team.html'));
+app.get("/team", (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'team.html'));
+});
+
+app.get('/imagine', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'imagine.html'));
+});
+
+app.post('/imagine', (req, res) => {
+
+    if (!req.body) {
+        return res.status(406);
+    }
+
+
+
 });
 
 app.listen(app.get('port'), () => {
