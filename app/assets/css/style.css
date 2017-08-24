@@ -1,0 +1,16 @@
+.logo-responsive {
+  max-width: 120px;
+  max-height: 50px; }
+
+.nav-box.open {
+  background: #000000 !important; }
+  .nav-box.open:before {
+    content: ' ';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-image: url("../images/overlay.png");
+    opacity: .6;
+    position: absolute; }
