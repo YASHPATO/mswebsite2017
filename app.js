@@ -3,11 +3,13 @@ const app = express();
 const path = require("path");
 const bodyparser = require("body-parser");
 const flash = require("flash");
+const requestSanitizer = require('request-sanitizer')();
 
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: true }));
+app.use(requestSanitizer.sanitize);
 app.use(express.static(path.join(__dirname, 'static'), { maxAge: 31557600000 }));
 
 app.get('/', (req, res) => {
@@ -27,12 +29,6 @@ app.get('/imagine', (req, res) => {
 });
 
 app.post('/imagine', (req, res) => {
-
-    if (!req.body) {
-        return res.status(406);
-    }
-
-
 
 });
 
