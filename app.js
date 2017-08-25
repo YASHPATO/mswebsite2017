@@ -3,6 +3,7 @@ const app = express();
 const path = require("path");
 const bodyparser = require("body-parser");
 const flash = require("flash");
+const requestSanitizer = require('request-sanitizer')();
 var GoogleSpreadsheet = require('google-spreadsheet');
 var creds = require('./client-secret.json');
 const doc = new GoogleSpreadsheet('1n3oV_9LyEC_v26GctaUPDMfSQK0oZXkdFlXNzE532gY');
@@ -27,10 +28,12 @@ const insertARow = ([name , regno , email , year, dept, rsvpevents]) => {
 
 setUp();
 
+
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: true }));
+app.use(requestSanitizer.sanitize);
 app.use(express.static(path.join(__dirname, 'static'), { maxAge: 31557600000 }));
 
 app.get('/', (req, res) => {
@@ -52,15 +55,9 @@ app.get('/imagine', (req, res) => {
 
 app.post('/imagine', (req, res) => {
 
-    if (!req.body) {
-        return res.status(406);
-    }
-
-
-
 });
 
 app.listen(app.get('port'), () => {
     console.log(' App is running at http://localhost:%d in %s mode', app.get('port'), app.get('env')); 
     console.log('  Press CTRL-C to stop\n');
-});
+})
