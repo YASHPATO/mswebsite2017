@@ -6,7 +6,6 @@ const flash = require("flash");
 const requestSanitizer = require('request-sanitizer')();
 var GoogleSpreadsheet = require('google-spreadsheet');
 var creds = require('./client-secret.json');
-// Boilerplate code to set up Google sheets as DataStore
 const doc = new GoogleSpreadsheet('1n3oV_9LyEC_v26GctaUPDMfSQK0oZXkdFlXNzE532gY');
 const setUp = () => {
     console.log(doc);
@@ -45,8 +44,8 @@ app.get('/contact', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'contact.html'));
 });
 
-app.get("/team", (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'team.html'));
+app.get("/about", (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'about.html'));
 });
 
 app.get('/imagine', (req, res) => {
@@ -54,10 +53,11 @@ app.get('/imagine', (req, res) => {
 });
 
 app.post('/imagine', (req, res) => {
-
+    console.log(res);
+    res.end();
 });
 
 app.listen(app.get('port'), () => {
     console.log(' App is running at http://localhost:%d in %s mode', app.get('port'), app.get('env')); 
     console.log('  Press CTRL-C to stop\n');
-})
+});
