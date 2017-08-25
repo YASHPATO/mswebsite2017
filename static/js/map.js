@@ -3,7 +3,7 @@ jQuery(function ($) {
   function initialize() {
          //add map, the type of map
            var mapOptions = {
-               zoom: 10,
+               zoom: 13,
                draggable: true,
 					scrollwheel: false,
                animation: google.maps.Animation.DROP,
@@ -16,8 +16,7 @@ jQuery(function ($) {
 
          //add locations
              var locations = [
-                 ['Melbourne office', -37.829000,144.957000,'images/pin.png'],
-                 ['Sunshine West', -37.795000, 144.816000,'images/pin.png'],
+                 ['MSTC SRM', 79.969829454,12.985329392,'images/pin.png'],
              ];
              //declare marker call it 'i'
              var marker, i;

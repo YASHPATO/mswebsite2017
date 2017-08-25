@@ -18,10 +18,11 @@ const setUp = () => {
 }
 
 // Sample request
-// insertARow(["Lokesh" , "RA1511003010524","lokesh.slg06@gmail.com","3rd", "CSE", "2nd,3rd"])
-const insertARow = ([name , regno , email , year, dept, rsvpevents]) => {
-    doc.addRow(1, {name:name, regno:regno, email:email , year:year, dept:dept, rsvpevents:rsvpevents}, (err) => {
+// insertARow(["Lokesh" , "RA1511003010524","lokesh.slg06@gmail.com","3rd", "CSE", "Smmple No."])
+const insertARow = ([name , regno , email , year, dept, phone]) => {
+    doc.addRow(1, {name:name, regno:regno, email:email , year:year, dept:dept, phone:phone}, (err) => {
         if(err) {console.log(err);}
+        console.log("I was here")
     });
 }
 
@@ -43,6 +44,11 @@ app.get('/', (req, res) => {
 app.get('/contact', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'contact.html'));
 });
+app.post('/contact', (req,res) => {
+    console.log(req.body);
+    res.status(200);
+    res.end();
+})
 
 app.get("/about", (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'about.html'));
@@ -52,9 +58,10 @@ app.get('/imagine', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'imagine.html'));
 });
 
-app.post('/imagine', (req, res) => {
-    console.log(res);
-    res.end();
+app.post('/imagine/', (req, res) => {
+    console.log(req.body);
+    insertARow([req.body.name,req.body.regno,req.body.email,req.body.year,req.body.dept,req.body.year,req.body.phone]);
+    res.redirect("/imagine");
 });
 
 app.listen(app.get('port'), () => {

@@ -430,7 +430,7 @@ ul.social li a:hover, ul.social li a:focus,
 .centered{
 	display:block;
 	position:absolute;
-	left:50%; top:50%;
+	left:50%; top:70%;
 	width:100%;
 	-moz-transform:translate(-50%,-50%);
 	-ms-transform:translate(-50%,-50%);
