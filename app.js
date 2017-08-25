@@ -3,6 +3,29 @@ const app = express();
 const path = require("path");
 const bodyparser = require("body-parser");
 const flash = require("flash");
+var GoogleSpreadsheet = require('google-spreadsheet');
+var creds = require('./client-secret.json');
+const doc = new GoogleSpreadsheet('1n3oV_9LyEC_v26GctaUPDMfSQK0oZXkdFlXNzE532gY');
+
+
+const setUp = () => {
+    console.log(doc);
+    doc.useServiceAccountAuth(creds, function(err){
+        if (err) {
+            console.log("Creds me error");
+            return err;
+        }
+    });
+}
+
+const insertARow = ([name , regno , email , year, dept, rsvpevents]) => {
+    doc.addRow(1, {name:name, regno:regno, email:email , year:year, dept:dept, rsvpevents:rsvpevents}, (err) => {
+        if(err) {console.log(err);}
+    });
+}
+
+
+setUp();
 
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
@@ -12,6 +35,7 @@ app.use(express.static(path.join(__dirname, 'static'), { maxAge: 31557600000 }))
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
+    insertARow(["Lokesh" , "RA1511003010524","3rd", "CSE", "2nd,3rd"])
 });
 
 app.get('/contact', (req, res) => {
