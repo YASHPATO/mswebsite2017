@@ -742,7 +742,7 @@ ul.block-topic li {
 /* Registry section*/
 
 .registry-form {
-    background: rgba(0, 0, 0, .4);
+    background: rgba(0, 0, 0, 1);
     padding: 50px 45px;
     overflow: hidden;
 }
