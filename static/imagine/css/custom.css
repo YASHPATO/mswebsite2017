@@ -16,3 +16,10 @@ sup {
     margin-bottom: 5%;
     margin-top: 10%;
 }
+
+@media screen and (max-width: 992px) {
+    .logo1 {
+        max-width: 20%;
+        float: right;
+    }
+}
