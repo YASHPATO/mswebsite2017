@@ -17,9 +17,16 @@ sup {
     margin-top: 10%;
 }
 
+.block-sponsor {
+    padding-bottom: 10px;
+}
+
 @media screen and (max-width: 992px) {
     .logo1 {
-        max-width: 20%;
+        max-width: 30%;
         float: right;
+    }
+    .block-img {
+        margin-bottom: 25px;
     }
 }
