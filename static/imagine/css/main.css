@@ -771,7 +771,7 @@ ul.block-topic li {
     margin-left: 10px;
 }
 
-input[type="text"],
+input[type="text"], input[type="email"] , input[type="tel"]
 .registry-form .block-select {
     background: rgba(255, 255, 255, .08);
     border: 1px solid rgba(255, 255, 255, 0);

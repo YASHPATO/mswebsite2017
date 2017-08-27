@@ -521,7 +521,7 @@
                 <!--Row-->
                 <div class="row">
                     <div class="col-md-6 front-p">
-                        <form class="registry-form form" method="post" action="#">
+                        <form class="registry-form form" id="reg">
                             <h2 class="sub-title-1 mb-30">Register your coming at Imagine Talks September 2017</h2>
                             <div class="col-sm-6">
                                 <input placeholder="Name" value="" id="name" name="name" type="text" required>
@@ -542,7 +542,7 @@
                                 <input placeholder="Phone number" value="" id="phone" name="phone" type="text">
                             </div>
                             <div class="col-sm-12">
-                                <input value="Register" class=" but submit" type="submit">
+                                <input value="Register" id="submit" class="but submit" type="submit">
                             </div>
                             <div class="col-sm-12">
                                 <p>* We don’t share your information with anyone.</p>
@@ -801,6 +801,31 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbGQXiGt-6UAmOFFdSzYI-byeE7ewBuVM&callback=initializeMap"></script>
     <!-- Google analytics -->
     <!-- End google analytics -->
+    <script>
+        $("#submit").click(function(e){
+            e.preventDefault();
+            var name = $("#name").val() , regno = $("#regno").val() ,  email = $("#email").val() , year = $("#year").val() , dept = $("#dept").val() , phone = $("#phone").val();
+            var data = {"name":name,"regno":regno,"email":email,"year":year,"dept":dept,"phone":phone};
+            $.ajax({
+                type: 'POST',
+                url: "/imagine",
+                data: data,
+                success: function() {
+                    $("#submit").prop("value","Registered");
+                    $("#submit").addClass("green");
+                    var form = document.getElementById("reg");
+                    var elements = form.elements;
+                    for (var i = 0, len = elements.length; i < len; ++i) {
+                        elements[i].disabled = true;
+                    }
+                },
+                error: function(err) {
+                    $("#submit").prop("value", "Not Sent");
+                    $("#submit").addClass("red");
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>

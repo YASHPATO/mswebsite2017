@@ -30,3 +30,11 @@ sup {
         margin-bottom: 25px;
     }
 }
+
+.green {
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%)!important;
+}
+
+.red {
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%)!important;
+}

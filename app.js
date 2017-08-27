@@ -60,8 +60,10 @@ app.get('/imagine', (req, res) => {
 
 app.post('/imagine/', (req, res) => {
     console.log(req.body);
-    insertARow([req.body.name,req.body.regno,req.body.email,req.body.year,req.body.dept,req.body.year,req.body.phone]);
-    res.redirect("/imagine");
+    const { name , regno , email , year , dept , phone } = req.body;
+    insertARow([name, regno , email , year , dept , phone]);
+    res.status(304);
+    res.end();
 });
 
 app.listen(app.get('port'), () => {
