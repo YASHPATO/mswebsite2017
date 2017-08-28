@@ -335,7 +335,7 @@ section.hero .inner-hero {
 .hero-content {
     position: relative;
     text-align: center;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -771,8 +771,9 @@ ul.block-topic li {
     margin-left: 10px;
 }
 
-input[type="text"], input[type="email"] , input[type="tel"]
-.registry-form .block-select {
+input[type="text"],
+input[type="email"],
+input[type="tel"] .registry-form .block-select {
     background: rgba(255, 255, 255, .08);
     border: 1px solid rgba(255, 255, 255, 0);
     margin-bottom: 25px;
