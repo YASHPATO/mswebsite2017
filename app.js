@@ -7,6 +7,7 @@ const requestSanitizer = require('request-sanitizer')();
 var GoogleSpreadsheet = require('google-spreadsheet');
 var creds = require('./client-secret.json');
 const doc = new GoogleSpreadsheet('1n3oV_9LyEC_v26GctaUPDMfSQK0oZXkdFlXNzE532gY');
+var imagine = require('./app/controller/imagineTalks.js');
 const setUp = () => {
     console.log(doc);
     doc.useServiceAccountAuth(creds, function(err){
@@ -57,6 +58,12 @@ app.get("/about", (req, res) => {
 app.get('/imagine', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'imagine.html'));
 });
+
+app.get('/imagineTalks', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'imagineTalks.html'));
+});
+
+app.post('/imagineTalksLogin', imagine.login);
 
 app.post('/imagine/', (req, res) => {
     console.log(req.body);
