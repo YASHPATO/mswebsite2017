@@ -8,8 +8,9 @@ var GoogleSpreadsheet = require('google-spreadsheet');
 var creds = require('./client-secret.json');
 const doc = new GoogleSpreadsheet('1n3oV_9LyEC_v26GctaUPDMfSQK0oZXkdFlXNzE532gY');
 var imagine = require('./app/controller/imagineTalks.js');
+var mongoConnect = require('./app/Utilities/mongoConnect.js');
 const setUp = () => {
-    console.log(doc);
+    // console.log(doc);
     doc.useServiceAccountAuth(creds, function(err){
         if (err) {
             console.log("Creds me error");
@@ -42,6 +43,8 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
+app.set('view engine', 'ejs')
+
 app.get('/contact', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'contact.html'));
 });
@@ -67,8 +70,9 @@ app.post('/imagineTalksLogin', imagine.login);
 
 app.post('/imagine/', (req, res) => {
     console.log(req.body);
-    const { name , regno , email , year , dept , phone } = req.body;
-    insertARow([name, regno , email , year , dept , phone]);
+    imagine.register(req.body);
+    // const { name , regno , email , year , dept , phone } = req.body;
+    // insertARow([name, regno , email , year , dept , phone]);
     res.status(304);
     res.end();
 });
