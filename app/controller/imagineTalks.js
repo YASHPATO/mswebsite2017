@@ -18,7 +18,6 @@ exports.login = function(request, response)
 
 exports.register = function(body)
 {
-    console.log(db);
     db.collection('Users').insertOne(body, function(err, data)
     {
         console.log('Error : ' + err);
