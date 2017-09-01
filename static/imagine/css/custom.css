@@ -42,3 +42,7 @@ sup {
 .red {
     background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%)!important;
 }
+
+.hidden {
+    display:none;
+}

@@ -13,6 +13,7 @@
     <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
     <meta http-equiv="pragma" content="no-cache" />
     <meta name="theme-color" content="#181818" />
+    <link rel="icon" href="img/favicon.ico">
     <!-- Css -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/base.css" rel="stylesheet" type="text/css" media="all" />
@@ -778,15 +779,23 @@
                 success: function() {
                     $("#submit").prop("value", "Registered");
                     $("#submit").addClass("green");
+                    $("#submit").removeAttr("id");
                     var form = document.getElementById("reg");
                     var elements = form.elements;
+                    console.log(elements);
                     for (var i = 0, len = elements.length; i < len; ++i) {
+                        elements[i].val = "";
                         elements[i].disabled = true;
+                        if(elements[i].classList[0] != "but"){
+                            elements[i].style = "display:none;";
+                        }
                     }
                 },
                 error: function(err) {
-                    $("#submit").prop("value", "Not Sent");
-                    $("#submit").addClass("red");
+                    setTimeout(function() {
+                        $("#submit").prop("value", "Not Sent");
+                        $("#submit").addClass("red");
+                    },3000);
                 }
             })
         })
