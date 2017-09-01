@@ -68,6 +68,14 @@ app.get('/imagineTalks', (req, res) => {
 
 app.post('/imagineTalksLogin', imagine.login);
 
+app.get('/checkCount', (req, res) => {
+    imagine.checkCount(function(data)
+    {
+        res.end(JSON.stringify(data));  
+    });
+    
+});
+
 app.post('/imagine/', (req, res) => {
     console.log(req.body);
     imagine.register(req.body);

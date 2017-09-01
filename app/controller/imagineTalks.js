@@ -24,3 +24,11 @@ exports.register = function(body)
         console.log('Written Data');
     });
 }
+
+exports.checkCount = function(callback)
+{
+    db.collection('Users').find({}).toArray(function(err, data)
+    {
+        callback(data.length);
+    });
+}
