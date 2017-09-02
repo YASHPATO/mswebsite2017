@@ -1,0 +1,36 @@
+.padding_below {
+  margin-bottom: 100px; }
+
+.overlay {
+  background: rgba(14, 14, 17, 0.3) !important; }
+
+@media screen and (max-width: 762px) {
+  .padding_bottom {
+    padding-bottom: 0 !important;
+    margin-bottom: -20px !important; } }
+
+@media screen and (max-width: 762px) {
+  .margin_top {
+    margin: 10px !important; } }
+
+@media screen and (max-width: 762px) {
+  .cbp-item {
+    margin-left: 10px !important;
+    margin-right: 10px !important; } }
+
+@media screen and (max-width: 762px) {
+  .top-able {
+    margin-top: 30px !important; } }
+
+.social.white {
+  margin-bottom: 30px; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+@media screen and (max-width: 762px) {
+  .xs-not-visible {
+    display: none; } }

@@ -1,0 +1,48 @@
+sup {
+    font-size: 10px;
+    text-transform: lowercase;
+}
+
+.hero-content h3 {
+    font-style: normal;
+}
+
+.event {
+    width: 100px;
+    max-height: 100px;
+    display: block;
+    margin: auto;
+    padding: 3%;
+    margin-bottom: 5%;
+    margin-top: 10%;
+}
+
+.block-sponsor {
+    padding-bottom: 10px;
+}
+
+.logo1 {
+    max-width: 75%;
+}
+
+@media screen and (max-width: 992px) {
+    .logo1 {
+        max-width: 30%;
+        float: right;
+    }
+    .block-img {
+        margin-bottom: 25px;
+    }
+}
+
+.green {
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%)!important;
+}
+
+.red {
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%)!important;
+}
+
+.hidden {
+    display:none;
+}

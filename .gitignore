@@ -2,3 +2,4 @@ node_modules/
 .vscode/
 static/sass/
 .DS_Store
+static/images/banner(old).jpg
