@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon app.js",
-    "frontend": "gulp"
+    "frontend": "gulp",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +25,8 @@
     "gulp-sourcemaps": "^2.6.1",
     "mongodb": "^2.2.31",
     "path": "^0.12.7",
-    "request-sanitizer": "0.0.6"
-  }
+    "request-sanitizer": "0.0.6",
+    "snyk": "^1.41.1"
+  },
+  "snyk": true
 }
