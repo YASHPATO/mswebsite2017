@@ -23,6 +23,6 @@
     "gulp-sourcemaps": "^2.6.1",
     "mongodb": "^2.2.31",
     "path": "^0.12.7",
-    "request-sanitizer": "0.0.6"
+    "request-sanitizer": "1.0.0"
   }
 }
